@@ -7,6 +7,8 @@ cd "${AOSP_BUILD_DIR}/packages/modules/Permission"
 patch -p1 --no-backup-if-mismatch < "${AOSP_BUILD_DIR}/platform/prebuilts/microg/00001-fake-package-sig.patch"
 cd "${AOSP_BUILD_DIR}/frameworks/base"
 patch -p1 --no-backup-if-mismatch < "${AOSP_BUILD_DIR}/platform/prebuilts/microg/00002-microg-sigspoof.patch"
+cd "${AOSP_BUILD_DIR}/frameworks/base"
+patch -p1 --no-backup-if-mismatch < "${AOSP_BUILD_DIR}/platform/prebuilts/magisk/00003-magisk_mkbootfs.patch"
 
 # apply custom hosts file
 custom_hosts_file="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"

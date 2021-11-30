@@ -2,6 +2,7 @@
 <manifest>
   <remote name="personal-remote" fetch="https://github.com/rattlesnakeos/" revision="11.0" />
   <remote name="seedvault-app" fetch="https://github.com/seedvault-app/" revision="android12" />
+  <remote name="magisk" fetch="https://github.com/beardeddude/" revision="10.0" /> 
 
   <!-- this custom repo - do not change path -->
   <project path="vendor/custom" name="example-custom-config-repo" remote="personal-remote" />
@@ -11,5 +12,8 @@
 
   <!-- seedvault pinned to a specific revision -->
   <project path="external/seedvault" name="seedvault" remote="seedvault-app" />
+
+  <!-- Magisk patch 2 -->
+  <project path="platform/prebuilts/magisk" name="rattlesnakeos-patches" remote="magisk" />
 
 </manifest>
