@@ -9,9 +9,12 @@ cd "${AOSP_BUILD_DIR}/frameworks/base"
 patch -p1 --no-backup-if-mismatch < "${AOSP_BUILD_DIR}/platform/prebuilts/microg/00002-microg-sigspoof.patch"
 
 find "${AOSP_BUILD_DIR}" -name mkbootfs.c
-tree -d "${AOSP_BUILD_DIR}"
+echo "${AOSP_BUILD_DIR}"
+echo "start cat"
+cat /home/ubuntu/aosp/system/core/mkbootfs/mkbootfs.c
+echo "end cat"
 
-cd "${AOSP_BUILD_DIR}/frameworks/base"
+cd "${AOSP_BUILD_DIR}"
 patch -p1 --no-backup-if-mismatch < "${AOSP_BUILD_DIR}/platform/prebuilts/magisk/00003-magisk_mkbootfs.patch"
 
 # apply custom hosts file
